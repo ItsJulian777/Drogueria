@@ -9,15 +9,19 @@
 
 
     <!---Link CDN FONT AWESOME-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2? family=Langostaydisplay=swap" rel="hoja de estilo">
     <link rel="stylesheet" href="Css/style.css">
-    
+    <link href="estilo.css" type="text/css" rel="stylesheet" media="">
     <link rel="stylesheet" href="Boostrap/estilos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <header class="main-header">    
+    <header class="main-header">
         <div class="container">
             <div class="main-header-container">
                 <h1 class="main-header-title">
@@ -25,77 +29,151 @@
                 </h1>
             </div>
 
-            <div class="main-header-container1">
-                <i class="fas fa-search"></i>
-                <input type="search" placeholder="Buscar Productos">
-                <a href=""><i class="fas fa-user"></i></a>
-                <a href="" alt="Carrito"><i class="fab fa-shopify"  ></i> </a>
-            </div>
-           
         </div>
-
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-
-          
     </header>
+    <!--empieza la barra de navegacion-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">OFERTAS</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  PRODUCTOS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+             
+            </ul>
+            <form class="d-flex">
+                <div class="main-header-container1">
+                     <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input type="search" placeholder="Buscar Productos">
+                    <a href=""><i class="fas fa-user"></i></a>
+                    <a href="" alt="Carrito"><i class="fab fa-shopify"></i> </a>
+                </div>
+             
+            </form>
+          </div>
+        </div>
+      </nav>
+    
+    <!--TERMINA la barra de navegacion
+  
+    -->
+    <!--Empieza la parte superior-->
+    <div class="superior">
+        <div>
+           <h2 id="oferta">Ofertas</h2>
+
+        </div>
+            
+
+        
+        <section class="productos">
+
+
+            <div class="producto">
+                <div class="card_product">
+                    <img src="#" alt="">
+                </div>
+
+                <div class="pro_description">
+                    <h4 class="title_product">
+                    </h4>
+                </div>
+                <div class="price">
+                    <span class="product_price"></span>
+                </div>
+                <div>
+
+                    <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
+                </div>
+            </div>
+
+
+            <div class="producto">
+                <div class="card_product">
+                    <img src="#" alt="">
+                </div>
+                <div class="pro_description">
+                    <h4 class="title_product">
+                    </h4>
+
+
+
+                </div>
+                <div class="price">
+                    <span class="product_price"></span>
+                </div>
+                <div class="logo_tags">
+                    <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
+                </div>
+            </div>
+
+
+            <div class="producto">
+                <div class="card_product">
+                    <img src="#" alt="">
+                </div>
+                <div class="pro_description">
+                    <h4 class="title_product">
+                        <br> 
+                    </h4>
+                </div>
+                <div class="price">
+                    <span class="product_price"></span>
+                </div>
+                <div class="logo_tags">
+                    <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
+                </div>
+            </div>
+
+
+  </div>
+  <!--Termina la parte superior de la pagina-->
+  <!--Empieza el cuerpo-->
+  
     <main class="main-main">
         <div class="container-main">
-            <div class="Title-Destacados">
-                <h2>Productos Destacados</h2>
+            <div>
+                <h2 id="pro">Productos Destacados</h2>
+
             </div>
             <section class="productos">
-             <div class="producto">
+
+
+                <div class="producto">
                     <div class="card_product">
                         <img src="./Img/acetamino.png" alt="">
                     </div>
+
                     <div class="pro_description">
                         <h4 class="title_product">Acetaminofen
-                            <br> Caja con 100 Tabletas  
+                            <br> Caja con 100 Tabletas
                         </h4>
                     </div>
                     <div class="price">
                         <span class="product_price">$18.600</span>
                     </div>
                     <div>
-                        <span><i class="fas fa-tags"></i></span>
+
+                        <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
                     </div>
                 </div>
+
+
                 <div class="producto">
                     <div class="card_product">
                         <img src="Img/advil.png" alt="">
@@ -112,7 +190,7 @@
                         <span class="product_price">$96.600</span>
                     </div>
                     <div class="logo_tags">
-                        <span><i class="fas fa-tags"></i></span>
+                        <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
                     </div>
                 </div>
 
@@ -123,13 +201,14 @@
                     </div>
                     <div class="pro_description">
                         <h4 class="title_product">Dolex Forte
-                            <br> Caja con 14 Capsulas Cubiertas</h4>
+                            <br> Caja con 14 Capsulas Cubiertas
+                        </h4>
                     </div>
                     <div class="price">
                         <span class="product_price">$33.650</span>
                     </div>
                     <div class="logo_tags">
-                        <span><i class="fas fa-tags"></i></span>
+                        <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
                     </div>
                 </div>
                 <div class="producto">
@@ -143,7 +222,7 @@
                         <span class="product_price">$95.500</span>
                     </div>
                     <div class="logo_tags">
-                        <span><i class="fas fa-tags"></i></span>
+                        <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
                     </div>
                 </div>
                 <div class="producto">
@@ -161,7 +240,7 @@
 
                     </div>
                     <div class="logo_tags">
-                        <span><i class="fas fa-tags"></i></span>
+                        <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
                     </div>
                 </div>
                 <div class="producto">
@@ -178,8 +257,7 @@
                         <span class="product_price">$4.500</span>
                     </div>
                     <div class="logo_tags" id="shop">
-                        <i class="fas
-                                    fa-tags"></i>
+                        <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
                     </div>
 
 
@@ -191,7 +269,54 @@
 
         </div>
     </main>
-
+<!--Empieza el pie de pagina-->
+<footer>
+    <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">State</label>
+          <select id="inputState" class="form-select">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+      </form>
+  </footer>
+  <!--Termina el pie de pagina-->
 </body>
 
 </html>

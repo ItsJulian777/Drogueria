@@ -7,11 +7,30 @@
 body {
     margin: 30px 20px 0px 20px;
 }
+header{
+    position: relative;
+    /*la posicion relative es cuando son cajas principales*/
+    margin: 20px auto;
+    width: 1000px;
+    height: 120px;
+    font-size: 15px;
+    background: rgb(180, 177, 177);
+    font-family:'Langosta', cursiva;
+
+}
+nav{
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+    height: 48px;
+
+}
 
 .main-header-title {
     text-align: center;
     font-size: 2.5em;
     margin: 10px 0;
+    font-family:'Langosta', cursiva;
 }
 
 .main-nav {
@@ -41,13 +60,67 @@ body {
     font-weight: 900;
 }
 
+/*Parte Superior*/
+
+.superior{
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+    height: 300px;
+
+
+}
+#arriba{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    place-self: center;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fbfbfb;
+    border-radius: 5%;
+
+    box-shadow: 1px 1px 3px 0px #d3d3ebb5;
+
+}
+#oferta{
+    text-align:left ;
+    font-size: 2.5em;
+    margin: 10px auto;
+    font-family:'Langosta', cursiva;
+
+}
+
+
+
 
 /*Productos*/
 
 .main-main {
-    margin-top: 50px;
+    margin-top: 80px ;
+    position: relative;
+    
 }
 
+
+    
+
+
+
+#pro{
+    text-align:left ;
+    font-size: 2.5em;
+    margin: 20px auto;
+    font-family:'Langosta', cursiva;
+    position: relative;
+    width: 1000px;
+    height: 30px;
+    
+
+}
 .producto {
     display: flex;
     width: 300px;
@@ -66,7 +139,7 @@ body {
 
 .card_product {
     display: flex;
-    height: 170px;
+    height: 140px;
 }
 
 .card_product img {
@@ -75,6 +148,7 @@ body {
 
 .title_product {
     font-weight: normal;
+    font-size: 20px;
 }
 
 .pro_description {
@@ -101,3 +175,11 @@ body {
 .producto:hover {
     background-color: #f0f2f5;
 }
+footer {
+
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+    height: 70px;
+    
+  }
