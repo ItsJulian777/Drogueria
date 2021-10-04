@@ -11,7 +11,7 @@ header{
     position: relative;
     /*la posicion relative es cuando son cajas principales*/
     margin: 20px auto;
-    width: 1000px;
+    width: auto;
     height: 120px;
     font-size: 15px;
     background: rgb(180, 177, 177);
@@ -178,8 +178,9 @@ nav{
 footer {
 
     position: relative;
-    margin: 20px auto;
-    width: 1000px;
-    height: 70px;
+    margin: 5px auto;
+    width: auto;
+    height: auto;
     
   }
+ 
