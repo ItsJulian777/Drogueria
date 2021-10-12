@@ -92,12 +92,7 @@ color: #f0f2f5;
 
 }
 
-#titulo{
-    position: relative;
-color: white;
-right: 780px;
 
-}
 nav{
     position: relative;
     margin:  auto;
@@ -123,8 +118,10 @@ color: black;
 .main-header-title {
     text-align: center;
     font-size: 2.5em;
+    position: relative;
     margin: 10px 0;
-    font-family:'Langosta', cursiva;
+    right: 500px;
+    font-family: 'Langosta', cursiva;
 }
 
 .main-nav {
