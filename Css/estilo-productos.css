@@ -106,6 +106,14 @@ nav{
     
 
 }
+#navega{
+    float: left;
+    
+    
+    margin: 0px 6px;
+
+
+}
 #navegacion{
 background:  #4f62ce;
 
@@ -156,11 +164,11 @@ color: black;
 
 /*Parte Superior*/
 
-.superior{
+#superior{
     position: relative;
     margin: 20px auto;
     width: 1000px;
-    height: 300px;
+    height: 10px;
 
 
 }
