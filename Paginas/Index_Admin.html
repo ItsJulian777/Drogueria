@@ -21,7 +21,11 @@
       integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css"/>
+     
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
 
   <style>
     .bd-placeholder-img {
@@ -113,8 +117,8 @@
 
 
 
-  <main>
-
+  <main >
+    <div class="d-flex">
     <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width:280px; min-height: 100vh; border-right: 0.2px solid rgb(63, 63, 63);">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
         <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap" /></svg>
@@ -175,10 +179,36 @@
    </div>
 
    <div class="container-info-admin">
+    <table id="tblUsuarios" class="table table-bordered border-primary">
+      <thead>
+          <tr>
+              <th>Id</th>
+              <th>Asunto</th>
+              <th>Area de Servicio</th>
+              <th>Prioridad</th>
+          </tr>
+      </thead>
+      <tbody>
+         
+          <tr>
+              <td>1 </td>
+              <td>2</td>
+              <td>3 </td>
+              <td>4</td>
+          </tr>
+          <tr>
+            <td>1 </td>
+            <td>2</td>
+            <td>3 </td>
+            <td>4</td>
+        </tr>
+          
+      </tbody>
+  </table>
 
    </div>
  
-  
+  </div>
   </main>
 
 
@@ -188,6 +218,11 @@
     crossorigin="anonymous"></script>
 
   <script src="../Javascript/sidebars.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $('#tblUsuarios').DataTable();
+    });
+</script>
 </body>
 
 </html>
