@@ -1,9 +1,10 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-   background: url(/Img/fondos.png);
+
     background-size: cover;
     background-attachment: fixed;
+    max-height: 100vh;
 }
 * {
     box-sizing: border-box;
