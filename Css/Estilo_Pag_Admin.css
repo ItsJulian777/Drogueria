@@ -10,6 +10,25 @@ body {
 html {
   height: -webkit-fill-available;
 }
+/*
+Seccion sidebar
+
+*/
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+  }
+}
+
 
 .container-admin {
   max-height: 100vh !important;
@@ -29,4 +48,13 @@ html {
 .link_sidebar:hover {
   background: #0d6efd;
   color: white;
-} 
+}
+
+/* Seccion Usuarios Admin */
+
+.container-Users-admin {
+  background-color: #ffffff;
+  width: 79%;
+  text-align: center;
+  margin: 10px !important;
+}
