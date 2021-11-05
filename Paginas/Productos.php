@@ -77,8 +77,8 @@
           <div class="main-header-container1">
 
             <input id="buscador" type="search" placeholder="Buscar Productos">
-            <a href="registrarvista.html"><i id="item" class="fas fa-user"></i></a>
-            <a href="Carrito.html" alt="Carrito"><i id="item" class="fas fa-shopping-cart"></i> </a>
+            <a href="registrarvista.php"><i id="item" class="fas fa-user"></i></a>
+            <a href="Carrito.php" alt="Carrito"><i id="item" class="fas fa-shopping-cart"></i> </a>
           </div>
 
         </form>

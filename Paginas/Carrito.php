@@ -55,7 +55,7 @@
                   PRODUCTOS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="Productos.html">Action</a></li>
+                  <li><a class="dropdown-item" href="Productos.php">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -67,8 +67,8 @@
                 <div class="main-header-container1">
                      
                     <input id="buscador" type="search" placeholder="Buscar Productos">
-                    <a href="registrarvista.html"><i id="item" class="fas fa-user"></i></a>
-                    <a href="Carrito.html" alt="Carrito"><i id="item"class="fas fa-shopping-cart"></i> </a>
+                    <a href="registrarvista.php"><i id="item" class="fas fa-user"></i></a>
+                    <a href="Carrito.php" alt="Carrito"><i id="item"class="fas fa-shopping-cart"></i> </a>
                 </div>
              
             </form>

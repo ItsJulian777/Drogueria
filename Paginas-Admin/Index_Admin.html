@@ -6,12 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <title>Administrador</title>
-        <!--Style Css-->
         <link rel="stylesheet" href="../Css/style.css">
         <link rel="stylesheet" href="../Boostrap/estilos.css" />
-        <link href="../Css/Estilo_Pag_Admin.css  " rel="stylesheet">
         <link href="../Css/estilos.css" type="text/css" rel="stylesheet" media="">
-        <!---LINK CDN -->
+        <!---Link CDN FONT AWESOME-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2? family=Langostaydisplay=swap" rel="hoja de estilo">
@@ -19,15 +17,30 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
               integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
               crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css"/>
-        <!--LINKS SCRIPT-->
+
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
 
-      
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
         <!-- Custom styles for this template -->
-        
+        <link href="../Css/sidebars.css  " rel="stylesheet">
     </head>
 
     <body>
@@ -85,7 +98,7 @@
                         <div class="main-header-container1">
 
                             <input id="buscador" type="search" placeholder="Buscar Productos">
-                            <a href="../Paginas/registrarvista.html"><i id="item" class="fas fa-user"></i></a>
+                            <a href="../InicioSesión/salir.php"><i id="item" ><img class="close" src="/Img/salir.png" alt="Salir del sistema" title="Salir"></i></a>
                             <a href="../Paginas/Carrito.html" alt="Carrito"><i id="item" class="fas fa-shopping-cart"></i> </a>
                         </div>
 
@@ -104,14 +117,14 @@
         <main >
             <div class="d-flex container-admin">
                 <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width:280px; min-height: 80vh; border-right: 0.2px solid rgb(63, 63, 63);">
-                    <a href="Index_Admin.html" class="d-flex mb align-items-center justify-content-center link-dark text-decoration-none">
+                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                         
-                        <span class="d-flex align-items-center  link-dark text-decoration-none fs-4">Administrador</span>
+                        <span class="fs-4">Administrador</span>
                     </a>
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto ">
                         <li class="nav-item">
-                            <a href="Usuarios_Admin.html" class="nav-link link-dark link_sidebar ">
+                            <a href="#" class="nav-link link-dark link_sidebar ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" fill="currentColor" class="bi bi-people-fill"
                                      viewBox="0 0 16 16">
                                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
@@ -119,12 +132,11 @@
                                       d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
                                 <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
                                 </svg>
-                                Usuarios
+                                Clientes
                             </a>
-                            <hr>
                         </li>
                         <li>
-                            <a href="Productos_Admin.html" class="nav-link link-dark link_sidebar ">
+                            <a href="#" class="nav-link link-dark link_sidebar ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" fill="currentColor" class="bi bi-basket"
                                      viewBox="0 0 16 16">
                                 <path
@@ -132,12 +144,26 @@
                                 </svg>
                                 Productos
                             </a>
-                            <hr>
                         </li>
 
                        
                         <li>
+<<<<<<< HEAD
                             <a href="Ventas_Admin.html" class="nav-link link-dark link_sidebar">
+=======
+                            <a href="#" class="nav-link link-dark link_sidebar ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" fill="currentColor" class="bi bi-radioactive"
+                                     viewBox="0 0 16 16">
+                                <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Z" />
+                                <path
+                                    d="M9.653 5.496A2.986 2.986 0 0 0 8 5c-.61 0-1.179.183-1.653.496L4.694 2.992A5.972 5.972 0 0 1 8 2c1.222 0 2.358.365 3.306.992L9.653 5.496Zm1.342 2.324a2.986 2.986 0 0 1-.884 2.312 3.01 3.01 0 0 1-.769.552l1.342 2.683c.57-.286 1.09-.66 1.538-1.103a5.986 5.986 0 0 0 1.767-4.624l-2.994.18Zm-5.679 5.548 1.342-2.684A3 3 0 0 1 5.005 7.82l-2.994-.18a6 6 0 0 0 3.306 5.728ZM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+                                </svg>
+                                Laboratorios  
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link link-dark link_sidebar">
+>>>>>>> 07f5080a3e72f9bfaf5d6b14f48c2c32bea7da12
                                 
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
@@ -148,7 +174,6 @@
                                   </svg>
                                 Ventas
                             </a>
-                            <hr>  
                         </li>
                     </ul>
                     <hr>
