@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-11-2021 a las 14:09:34
--- Versión del servidor: 10.4.20-MariaDB
--- Versión de PHP: 8.0.9
+-- Tiempo de generación: 09-11-2021 a las 22:11:36
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -148,6 +148,11 @@ CREATE TABLE `usuario` (
   `edad` varchar(45) NOT NULL,
   `dni_us` varchar(45) NOT NULL,
   `contraseña_us` varchar(45) NOT NULL,
+  `telefono_us` int(11) NOT NULL,
+  `residencia_us` varchar(45) NOT NULL,
+  `correo_us` varchar(45) NOT NULL,
+  `sexo_us` varchar(45) NOT NULL,
+  `adicional_us` varchar(500) NOT NULL,
   `us_tipo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -155,17 +160,13 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nombre_us`, `apellidos_us`, `edad`, `dni_us`, `contraseña_us`, `us_tipo`) VALUES
-(0, 'sdasdasd', 'sadasdasdasd', '2021-11-01', 'ana', '', 3),
-(1, 'Administrador', 'control', '20', '12345', '12345', 1),
-(2, 'Administrador', 'tecnico', '20', '67890', '67890', 2),
-(11223, '23dsd', 'dsdsdsdsd', '2021-11-03', 'osfecasu', '', 3),
-(12323, 'OSFE', 'CACE', '2021-11-02', 'COÑO', '5647', 3),
-(323213, 'sdaasdd', 'sddsss', '2021-11-01', 'ssdddd', '', 3),
-(676767, 'hjh', 'hjjhjbjh', '2021-11-03', 'erer', 'ererer', 3),
-(1151928, 'oscar', 'sadad', '2021-11-01', 'meza', '654321', 3),
-(4324234, '234234234', '23432423', '2021-11-03', '34234', '234234', 3),
-(213213123, '123123213213', '23123123', '2021-11-02', '123123', '1231232323323', 3);
+INSERT INTO `usuario` (`id_usuario`, `nombre_us`, `apellidos_us`, `edad`, `dni_us`, `contraseña_us`, `telefono_us`, `residencia_us`, `correo_us`, `sexo_us`, `adicional_us`, `us_tipo`) VALUES
+(1, 'Administrador', 'control', '20', '12345', '12345', 22222, 'ssddsd', 'sdsdsdsd@gmail.com', 'sdsddsdds', 'waeaweaweawe', 1),
+(2, 'Administrador', 'tecnico', '20', '67890', '67890', 22222, 'ssddsd', 'sdsdsdsd@gmail.com', 'sdsddsdds', 'waeaweaweawe', 2),
+(123213, 'sdsdd', 'dsdsdsd', '2021-11-02', 'osfe', '09876', 22222, 'ssddsd', 'sdsdsdsd@gmail.com', 'sdsddsdds', 'waeaweaweawe', 3),
+(1151928, 'oscar', 'felip', '2021-11-01', 'oneweawe', 'jkanime123', 0, '', '', '', '', 3),
+(343432342, 'ewfssfsff', 'sfsfsdfsdfsdff', '2021-11-12', 'kaguyafdsfdsfdsf', '12345672323', 22222, 'ssddsd', 'sdsdsdsd@gmail.com', 'sdsddsdds', 'waeaweaweawe', 3),
+(1231232133, 'asdasdasd', 'asdasdasdasdasda', '2021-11-04', 'one', '234', 22222, 'ssddsd', 'sdsdsdsd@gmail.com', 'sdsddsdds', 'waeaweaweawe', 3);
 
 -- --------------------------------------------------------
 
