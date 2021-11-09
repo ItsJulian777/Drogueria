@@ -52,7 +52,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a id="letras" class="nav-link active" aria-current="page" href="../Index.html">INICIO</a>
+            <a id="letras" class="nav-link active" aria-current="page" href="../Index.php">INICIO</a>
           </li>
           <li class="nav-item">
             <a id="letras" class="nav-link" href="#">OFERTAS</a>
@@ -77,7 +77,40 @@
           <div class="main-header-container1">
 
             <input id="buscador" type="search" placeholder="Buscar Productos">
-            <a href="registrarvista.php"><i id="item" class="fas fa-user"></i></a>
+            <?php
+$alert ="";
+session_start();
+if(!empty($_SESSION['active'])){
+  
+    switch ($_SESSION['us_tipo']){
+        case 1:
+
+            ?>
+ <a href="Paginas-Admin/Index_Admin.html"><i id="item" class="fas fa-user"></i></a>
+ <?php
+
+          break;
+          case 2:
+          ?>
+<a href="Paginas-Admin/Index_Admin.html"><i id="item" class="fas fa-user"></i></a>
+<?php
+
+break;
+case 3:
+?>
+<a href="Cuenta.php"><i id="item" class="fas fa-user"></i></a>
+<?php
+
+break;
+
+}
+}else {
+ ?>
+ <a href="LoginInicio.php"><i id="item" class="fas fa-user"></i></a>
+ <?php
+}
+?>
+           
             <a href="Carrito.php" alt="Carrito"><i id="item" class="fas fa-shopping-cart"></i> </a>
           </div>
 

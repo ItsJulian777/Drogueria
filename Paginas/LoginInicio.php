@@ -17,7 +17,7 @@ require_once "../InicioSesión/Conexion.php";
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 
-$query = mysqli_query($coneccion,"SELECT * FROM usuario inner join tipo_us on us_tipo=id_tipo_us where dni_us='$user' AND contraseña_us='$pass' ");
+$query = mysqli_query($coneccion,"SELECT * FROM usuario inner join tipo_us on us_tipo=id_tipo_us where id_usuario='$user' AND contraseña_us='$pass' ");
 $result= mysqli_num_rows($query);
 
 if($result >0){
@@ -28,11 +28,14 @@ if($result >0){
   $_SESSION['us_tipo']= $data['us_tipo'];
   switch ($_SESSION['us_tipo']){
 case 1:
-  header('location:../Paginas-Admin/Adm_index.php');
+  header('location:../Paginas-Admin/Index_Admin.html');
   break;
   case 2:
     header('location:../Paginas-Admin/Usuarios_Admin.html');
     break;
+    case 3:
+      header('location:../Index.php');
+      break;
 
   }
   
@@ -76,8 +79,8 @@ session_destroy();
       <div class="elemento">
         <div class="alert"><?php echo isset($alert) ? $alert :'';?></div>
         <input type="submit" value="Enviar" class="btn" />
-        <p><a class="link" href="../Paginas/registrarvista.php">Volver</a></p>
-        <p><a class="link" href="../Index.html">HOME</a></p>
+        <p>¿No tienes una cuenta?<a  href="../Paginas/registrarvista.php">Registrate Sesion</a></p>
+          <p><a class="link" href="../Index.php">HOME</a></p>
       </div>
     </form>
   </div>

@@ -80,7 +80,7 @@ if(mysqli_query($coneccion, $sqlgrabar )){
         <center>
           <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
           <p>¿Ya tienes una cuenta?<a  href="../Paginas/LoginInicio.php">Iniciar Sesion</a></p>
-          <p><a class="link" href="../Index.html">HOME</a></p>
+          <p><a class="link" href="../Index.php">HOME</a></p>
 
 
         </center>
