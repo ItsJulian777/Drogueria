@@ -1,123 +1,31 @@
+<?php
+    
+    include '../InicioSesión/configServer.php';
+    include '../InicioSesión/consulSQL.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drogueria</title>
-
-
-  <!---Link CDN FONT AWESOME-->
-  <link rel="stylesheet" href="../Css/style.css">
-  <link href="../Css/estilo-productos.css" type="text/css" rel="stylesheet" media="">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2? family=Langostaydisplay=swap" rel="hoja de estilo">
- 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  <link rel="stylesheet" href="../Boostrap/estilos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<?php include '../Enlaces/link-Productos.php'; ?>
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="container">
+    <header class="main-header">
+        <div class="container">
 
-      <div class="main-header-container">
-        <h1 id="titulo" class="main-header-title">
-          Tu Drogueria
-        </h1>
-        <img id="icono" src="https://image.flaticon.com/icons/png/512/185/185932.png" alt="Drogueria el reloj">
-        <a href="#" id="face" class="red"> <img id="icono"
-            src="https://th.bing.com/th/id/OIP.lPLk_BPmeSAu1COdk8i8iwHaHa?pid=ImgDet&rs=1"
-            alt="Drogueria el reloj"><span><i></i></span></a>
-        <a href="#" id="insta" class="red"> <img id="icono"
-            src="https://i0.pngocean.com/files/750/461/292/logo-computer-icons-instagram.jpg" alt="Drogueria el reloj">
-          <span><i></i></span></a>
-        <a href="#" id="whasa" class="red"> <img id="icono"
-            src="https://th.bing.com/th/id/OIP.8fFvZfU73gxvOshB-XsJRQD6D6?pid=ImgDet&rs=1" alt="Drogueria el reloj">
-          <span><i></i></span></a>
+            <div class="main-header-container">
+                <h1 id="titulo" class="main-header-title">
+                    Tu Drogueria
+                </h1>
+                <img id="icono" src="https://image.flaticon.com/icons/png/512/185/185932.png" alt="Drogueria el reloj">
+              
+                        
+            </div>
 
-      </div>
-
-    </div>
-  </header>
-  <!--empieza la barra de navegacion-->
-  <nav id="letras" class="navbar navbar-expand-lg navbar-light bg-light">
-    <div id="navegacion" class="container-fluid">
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a id="letras" class="nav-link active" aria-current="page" href="../Index.php">INICIO</a>
-          </li>
-          <li class="nav-item">
-            <a id="letras" class="nav-link" href="#">OFERTAS</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a id="letras" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              PRODUCTOS
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-
-        </ul>
-        <form class="d-flex">
-          <div class="main-header-container1">
-
-            <input id="buscador" type="search" placeholder="Buscar Productos">
-            <?php
-$alert ="";
-session_start();
-if(!empty($_SESSION['active'])){
-  
-    switch ($_SESSION['us_tipo']){
-        case 1:
-
-            ?>
- <a href="Paginas-Admin/Index_Admin.html"><i id="item" class="fas fa-user"></i></a>
- <?php
-
-          break;
-          case 2:
-          ?>
-<a href="Paginas-Admin/Index_Admin.html"><i id="item" class="fas fa-user"></i></a>
-<?php
-
-break;
-case 3:
-?>
-<a href="Cuenta.php"><i id="item" class="fas fa-user"></i></a>
-<?php
-
-break;
-
-}
-}else {
- ?>
- <a href="LoginInicio.php"><i id="item" class="fas fa-user"></i></a>
- <?php
-}
-?>
-           
-            <a href="Carrito.php" alt="Carrito"><i id="item" class="fas fa-shopping-cart"></i> </a>
-          </div>
-
-        </form>
-      </div>
-    </div>
-  </nav>
+        </div>
+        <?php include '../Enlaces/navbar.php'; ?>
+    </header>
 
   <!--TERMINA la barra de navegacion
   
@@ -150,188 +58,168 @@ break;
   <!--Empieza el cuerpo-->
 
   <main class="main-main">
-    <div class="container-main">
-      <div>
-        <h2 class="h3" id="pro">Todos Los Productos</h2>
+     <section id="infoproduct">
+  <div class="container">
+            <div class="page-header">
+              <h1>PRODUCTOS <small class="tittles-pages-logo"></small></h1>
+            </div>
+            <?php
+              $checkAllCat=ejecutarSQL::consultar("SELECT * FROM categoria");
+              if(mysqli_num_rows($checkAllCat)>=1):
+            ?>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-xs-12 col-md-4">
+                    <div class="dropdown">
+                      <button class="btn btn-primary btn-raised dropdown-toggle" type="button" id="drpdowncategory" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Seleccione una categoría &nbsp;
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="drpdowncategory">
+                        <?php 
+                          while($cate=mysqli_fetch_array($checkAllCat, MYSQLI_ASSOC)){
+                              echo '
+                                <li><a href="product.php?categ='.$cate['CodigoCat'].'">'.$cate['Nombre'].'</a></li>
+                                <li role="separator" class="divider"></li>
+                              ';
+                          }
+                        ?>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-md-4 col-md-offset-4">
+                    <form action="./search.php" method="GET">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                          <input type="text" id="addon1" class="form-control" name="term" required="" title="Escriba nombre o marca del producto">
+                          <span class="input-group-btn">
+                              <button class="btn btn-info btn-raised" type="submit">Buscar</button>
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            <?php
+                $categoria=consultasSQL::clean_string($_GET['categ']);
+                if(isset($categoria) && $categoria!=""){
+            ?>
+              <div class="row">
+                <?php
+                  $mysqli = mysqli_connect(SERVER, USER, PASS, BD);
+                  mysqli_set_charset($mysqli, "utf8");
 
-      </div>
-      <section class="productos">
+                  $pagina = isset($_GET['pag']) ? (int)$_GET['pag'] : 1;
+                  $regpagina = 20;
+                  $inicio = ($pagina > 1) ? (($pagina * $regpagina) - $regpagina) : 0;
+
+                  $consultar_productos=mysqli_query($mysqli,"SELECT SQL_CALC_FOUND_ROWS * FROM producto WHERE CodigoCat='$categoria' AND Stock > 0 AND Estado='Activo' LIMIT $inicio, $regpagina");
+
+                  $selCat=ejecutarSQL::consultar("SELECT * FROM categoria WHERE CodigoCat='$categoria'");
+                  $datCat=mysqli_fetch_array($selCat, MYSQLI_ASSOC);
+
+                  $totalregistros = mysqli_query($mysqli,"SELECT FOUND_ROWS()");
+                  $totalregistros = mysqli_fetch_array($totalregistros, MYSQLI_ASSOC);
+        
+                  $numeropaginas = ceil($totalregistros["FOUND_ROWS()"]/$regpagina);
+
+                  if(mysqli_num_rows($consultar_productos)>=1){
+                    echo '<h3 class="text-center">Se muestran los productos de la categoría <strong>"'.$datCat['Nombre'].'"</strong></h3><br>';
+                    while($prod=mysqli_fetch_array($consultar_productos, MYSQLI_ASSOC)){
+                ?>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                         <div class="thumbnail">
+                           <img class="img-product" src="./assets/img-products/<?php if($prod['Imagen']!="" && is_file("./assets/img-products/".$prod['Imagen'])){ echo $prod['Imagen']; }else{ echo "default.png"; } ?>
+                           ">
+                           <div class="caption">
+                             <h3><?php echo $prod['Marca']; ?></h3>
+                             <p><?php echo $prod['NombreProd']; ?></p>
+                             <?php if($prod['Descuento']>0): ?>
+                             <p>
+                             <?php
+                             $pref=number_format($prod['Precio']-($prod['Precio']*($prod['Descuento']/100)), 2, '.', '');
+                             echo $prod['Descuento']."% descuento: $".$pref; 
+                             ?>
+                             </p>
+                             <?php else: ?>
+                              <p>$<?php echo $prod['Precio']; ?></p>
+                             <?php endif; ?>
+                             <p class="text-center">
+                                 <a href="infoProd.php?CodigoProd=<?php echo $prod['CodigoProd']; ?>" class="btn btn-primary btn-raised btn-sm btn-block"><i class="fa fa-plus"></i>&nbsp; Detalles</a>
+                             </p>
+
+                           </div>
+                         </div>
+                     </div>     
+                <?php    
+                  }
+                  if($numeropaginas>0):
+                ?>
+                <div class="clearfix"></div>
+                <div class="text-center">
+                  <ul class="pagination">
+                    <?php if($pagina == 1): ?>
+                        <li class="disabled">
+                            <a>
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    <?php else: ?>
+                        <li>
+                            <a href="product.php?categ=<?php echo $categoria; ?>&pag=<?php echo $pagina-1; ?>">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    <?php endif; ?>
 
 
-        <div class="producto">
-          <div class="card_product">
-            <img src="../Img/acetamino.png" alt="">
-          </div>
+                    <?php
+                        for($i=1; $i <= $numeropaginas; $i++ ){
+                            if($pagina == $i){
+                                echo '<li class="active"><a href="product.php?categ='.$categoria.'&pag='.$i.'">'.$i.'</a></li>';
+                            }else{
+                                echo '<li><a href="product.php?categ='.$categoria.'&pag='.$i.'">'.$i.'</a></li>';
+                            }
+                        }
+                    ?>
+                    
 
-          <div class="pro_description">
-            <h4 class="title_product">Acetaminofen
-              <br> Caja con 100 Tabletas
-            </h4>
-          </div>
-          <div class="price">
-            <span class="product_price">$18.600</span>
-          </div>
-          <div>
-
-            <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
-          </div>
+                    <?php if($pagina == $numeropaginas): ?>
+                        <li class="disabled">
+                            <a>
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    <?php else: ?>
+                        <li>
+                            <a href="product.php?categ=<?php echo $categoria; ?>&pag=<?php echo $pagina+1; ?>">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+                  </ul>
+                </div>
+                <?php
+                  endif;
+                  }else{
+                    echo '<h2 class="text-center">Lo sentimos, no hay productos registrados en la categoría <strong>"'.$datCat['Nombre'].'"</strong></h2>';
+                  }
+                ?>
+              </div>
+            <?php
+                }else{
+                  echo '<h2 class="text-center">Por favor seleccione una categoría para empezar</h2>';
+                }
+              else:
+                echo '<h2 class="text-center">Lo sentimos, no hay productos ni categorías registradas en la tienda</h2>';
+              endif;
+            ?>
         </div>
-
-
-        <div class="producto">
-          <div class="card_product">
-            <img src="../Img/advil.png" alt="">
-          </div>
-          <div class="pro_description">
-            <h4 class="title_product">Advil Max
-              <br> Caja con 72 Capsulas Liquidas
-            </h4>
-
-
-
-          </div>
-          <div class="price">
-            <span class="product_price">$96.600</span>
-          </div>
-          <div class="logo_tags">
-            <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
-          </div>
-        </div>
-
-
-        <div class="producto">
-          <div class="card_product">
-            <img src="../Img/dolexF.png" alt="">
-          </div>
-          <div class="pro_description">
-            <h4 class="title_product">Dolex Forte
-              <br> Caja con 14 Capsulas Cubiertas
-            </h4>
-          </div>
-          <div class="price">
-            <span class="product_price">$33.650</span>
-          </div>
-          <div class="logo_tags">
-            <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
-          </div>
-        </div>
-        <div class="producto">
-          <div class="card_product">
-            <img src="../Img/nan.png" alt="">
-          </div>
-          <div class="pro_description">
-            <h4 class="title_product">Leche Nan Pro </h4>
-          </div>
-          <div class="price">
-            <span class="product_price">$95.500</span>
-          </div>
-          <div class="logo_tags">
-            <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
-          </div>
-        </div>
-        <div class="producto">
-          <div class="card_product">
-            <img src="../Img/pañales.png" alt="">
-          </div>
-          <div class="pro_description">
-            <h4 class="title_product">Pañales</h4>
-
-
-
-          </div>
-          <div class="price">
-            <span class="product_price">$22.649</span>
-
-          </div>
-          <div class="logo_tags">
-            <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
-          </div>
-        </div>
-        <div class="producto">
-          <div class="card_product">
-            <img src="../Img/vitaminaC.png" alt="">
-          </div>
-          <div class="pro_description">
-            <h4 class="title_product">Vitamina C</h4>
-
-
-
-          </div>
-          <div class="price">
-            <span class="product_price">$4.500</span>
-          </div>
-          <div class="logo_tags" id="shop">
-            <a href="#" class="btn btn-primary"> <span><i class="fas fa-tags"></i></span></a>
-          </div>
-
-
-
-        </div>
-
-
-      </section>
-
-    </div>
+    </section>
   </main>
-  <footer class="bd-footer py-5 mt-5 bg-light">
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-lg-3 mb-3">
-          <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
-            aria-label="DROGUERIA" _mstaria-label="138918">
-
-            <span class="fs-5" _msthash="1416402" _msttexthash="138918">Drogueria</span>
-          </a>
-          <ul class="list-unstyled small text-muted">
-            <li class="mb-2" _msthash="1363115" _msttexthash="7235683">Diseñado y construido con todo el amor del mundo
-              por el equipo de tu farmacia y Drogueria mas confiable</li>
-
-          </ul>
-
-        </div>
-        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
-          <h5 _msthash="1094392" _msttexthash="92313">Enlaces</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="/" _msthash="1363388" _msttexthash="59059">Inicio</a></li>
-            <li class="mb-2"><a href="/" _msthash="1363518" _msttexthash="44265">Ofertas</a></li>
-            <li class="mb-2"><a href="/" _msthash="1363648" _msttexthash="115843">Ejemplos</a></li>
-
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5 _msthash="1094600" _msttexthash="75413">Sobre Nosotros</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="/" _msthash="1363661" _msttexthash="95693">Hitoria</a></li>
-            <li class="mb-2"><a href="/" _msthash="1363791" _msttexthash="346359">Donde encontrarnos</a></li>
-            <li class="mb-2"><a href="/" _msthash="1363921" _msttexthash="157144">vision</a></li>
-            <li class="mb-2"><a href="/" _msthash="1364051" _msttexthash="95407">Mision</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5 _msthash="1094808" _msttexthash="139971">Productos</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="/" _msthash="1363934" _msttexthash="149942">Cuidado Respiratorio</a></li>
-            <li class="mb-2"><a href="/" _msthash="1363934" _msttexthash="149942">Cuidado Personal</a></li>
-            <li class="mb-2"><a href="/" _msthash="1363934" _msttexthash="149942">Cuidado en Casa</a></li>
-            <li class="mb-2"><a href="/" _msthash="1363934" _msttexthash="149942">Medicamentos</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5 _msthash="1095016" _msttexthash="131768">Comunidad</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="/" _msthash="1364207" _msttexthash="160394">Usuarios</a></li>
-
-          </ul>
-        </div>
-        <div class="pie">
-          <div class="small text-center text-muted">Copyright &copy; 2021 - Tu Drogueria</div>
-        </div>
-        </form>
-      </div>
-    </div>
-    </div>
-
-  </footer>
+  <?php include '../Enlaces/footer.php'; ?>
 
   <!--Termina el pie de pagina-->
 </body>
