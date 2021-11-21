@@ -1,7 +1,7 @@
 <?php
 
  $host = "localhost";
- $bd= "farmacia";
+ $bd= "store";
 
 $usuario= "root";
  $contraseña="";
