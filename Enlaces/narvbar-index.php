@@ -2,6 +2,9 @@
     session_start(); 
     error_reporting(E_PARSE);
 ?>
+<head>
+<?php include 'link.php'; ?>
+</head>
 <nav id="letras" class="navbar navbar-expand-lg navbar-light bg-light">
         <div id="navegacion" class="container-fluid">
 
@@ -38,15 +41,19 @@
                          if(!$_SESSION['nombreAdmin']==""){
                              echo ' 
                                 
-                                 <a id="letras"  href="./Paginas-Admin/Index_Admin.php" class="table-cell-td">Administración</a>
-                                 <a id="letras"  href="./InicioSesión/salir.php" class="table-cell-td exit-system">
+                                 <a id="letras"  href="./Paginas-Admin/Index_Admin.php" class="table-cell-td" style="
+                                 text-decoration: none;" >Administración</a>
+                                 <a id="letras"  href="./InicioSesión/salir.php" class="table-cell-td exit-system" style="
+                                 text-decoration: none;">
                                      <i id="letras"  href="./Paginas-Admin/Index_Admin.php" class="fa fa-user"></i>&nbsp;&nbsp;'.$_SESSION['nombreAdmin'].'
                                  </a>
                               ';
                          }else if(!$_SESSION['nombreUser']==""){
                              echo ' 
-                             <a id="letras"  href="./Paginas/Cuenta.php" class="table-cell-td">Cuenta</a>
-                             <a id="letras"  href="./InicioSesión/salir.php" class="table-cell-td exit-system">
+                             <a id="letras"  href="./Paginas/Cuenta.php" class="table-cell-td" style="
+                             text-decoration: none;" >Cuenta</a>
+                             <a id="letras"  href="./InicioSesión/salir.php" class="table-cell-td exit-system" style="
+                             text-decoration: none;" >
                                  <i id="letras"  href="./Paginas/Cuenta.php" class="fa fa-user"></i>&nbsp;&nbsp;'.$_SESSION['nombreUser'].'
                                  <a href="#!" class="table-cell-td userConBtn" data-code="'.$_SESSION['UserNIT'].'">
                                  <i class="glyphicon glyphicon-cog"></i>
@@ -56,16 +63,21 @@
                          }else{
                              echo ' 
    
-                             <a id="letras" href="./Paginas/registrarvista.php" class="table-cell-td">Registro</a>
-                                 <a id="letras" href="Paginas/LoginInicio.php" class="table-cell-td" data-toggle="modal" data-target=".modal-login">
-                                     <i id="letras" class="fa fa-user"></i>&nbsp;&nbsp;Login
+                             <a id="letras" href="./Paginas/registrarvista.php" class="table-cell-td"  style="
+                             text-decoration: none;">Registro</a>
+                                 <a id="letras"  style="
+                                 text-decoration: none;" href="Paginas/LoginInicio.php" class="table-cell-td" data-toggle="modal" data-target=".modal-login">
+                                     <i id="letras" class="fa fa-shopping-cart"></i>&nbsp;&nbsp;Login
                                  </a>
                               ';
                          }
                      ?>
                     
  
-                       <a id="letras"  href="./Paginas/Carrito.php" class="fas fa-shopping-cart">Carrito</a>
+                       <a id="letras"  href="./Paginas/Carrito.php" class="table-cell-td "  style="
+    text-decoration: none;">
+                       <i id="letras" class="fa fa-shopping-cart "></i>&nbsp;&nbsp;Carrito
+                       </a>
                         
                     </div>
 

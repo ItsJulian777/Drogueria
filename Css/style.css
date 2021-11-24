@@ -38,77 +38,7 @@ header{
 
 
 }
-.red {
-    position: absolute;
-    /*la posicion absolute se usa para cajas internas*/
 
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-
-    
-
-
-  }
-
-  #face {
-    position: absolute;
-    /*la posicion absolute se usa para cajas internas*/
-    
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    top: 5px;
-    right: 90px;
-
-  }
-
-  #whasa {
-    position: absolute;
-    /*la posicion absolute se usa para cajas internas*/
-    
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    top: 5px;
-    right: 20px;
-
-  }
-
-  #insta {
-    position: absolute;
-    /*la posicion absolute se usa para cajas internas*/
-    
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    top: 5px;
-    right: 160px;
-
-  }
-.h3{
-color: #000000;
-
-
-}
-
-
-nav{
-    position: relative;
-    margin:  auto;
-    width: auto;
-    height: 48px;
-    
-
-}
-#navegacion{
-background:  #0d6efd;
-
-}
-#letras{
-color: white;
-
-}
 #item{
 
 color: black;
@@ -120,9 +50,9 @@ color: black;
     font-size: 2.5em;
     position: relative;
     margin: 10px 0;
-    right: 500px;
+    
     font-family: 'Langosta', cursiva;
-    color: rgb(0, 0, 0);
+    color: rgb(204, 30, 30);
 }
 
 .main-nav {

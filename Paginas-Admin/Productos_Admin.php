@@ -29,11 +29,9 @@
         <?php include '../Enlaces/navbar.php'; ?>
     </header>
 
-    <br>
 <br>
 <br>
-<br>
-<br>
+
 
 
         <main >
@@ -120,57 +118,49 @@
                                                     <legend>Datos básicos</legend>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-6 col-md-4">
-                                                  <div class="form-group label-floating">
-                                                    <label class="control-label">Código de producto</label>
-                                                    <input  class="input" type="text" required maxlength="30" name="prod-codigo" placeholder="Codigo Requerido">
+                                                  <div class="form-group label-floating mb-2">
+                                                    <!--<label class="control-label">Código de producto</label>-->
+                                                    <input  class="form-control" type="text" required maxlength="30" name="prod-codigo" placeholder="Codigo Requerido">
                                                   </div>
                                                 </div>
-                                                <br>
-                                                <br>
-                                                <br>
+                                               
                                                 <div class="col-xs-12 col-sm-6 col-md-4">
-                                                  <div class="form-group label-floating">
-                                                    <label class="control-label">Nombre de producto</label>
+                                                  <div class="form-group label-floating mb-2">
+                                                   <!--  <label class="control-label">Nombre de producto</label>-->
                                                     <input  type="text" class="form-control" required maxlength="30" name="prod-name" placeholder="Nombre Requerido">
                                                   </div>
                                                 </div>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
+                                                
 
                                                 <div class="col-xs-12 col-sm-6 col-md-4">
-                                                  <div class="form-group label-floating">
-                                                    <label class="control-label">Marca</label>
+                                                  <div class="form-group label-floating mb-2">
+                                                   <!-- <label class="control-label">Marca</label>-->
                                                     <input  type="text" class="form-control" required name="prod-marca" placeholder="Marca Requerido">
                                                   </div>
                                                 </div>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
+                                               
 
                                                 <div class="col-xs-12 col-sm-6 col-md-4">
-                                                  <div class="form-group label-floating">
-                                                    <label class="control-label">Modelo</label>
+                                                  <div class="form-group label-floating mb-2">
+                                                    <!--<label class="control-label">Modelo</label>-->
                                                     <input  type="text" class="form-control" required name="prod-model"placeholder="Modelo Requerido">
                                                   </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-6 col-md-4">
-                                                  <div class="form-group label-floating">
-                                                    <label class="control-label">Precio</label>
+                                                  <div class="form-group label-floating mb-2">
+                                                    <!--<label class="control-label">Precio</label>-->
                                                     <input  type="text" class="form-control" required  name="prod-price"placeholder="Precio Requerido">
                                                   </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-6 col-md-4">
-                                                  <div class="form-group label-floating">
-                                                    <label class="control-label">Descuento (%)</label>
+                                                  <div class="form-group label-floating mb-2">
+                                                    <!--<label class="control-label">Descuento (%)</label>-->
                                                     <input type="text" class="form-control" required maxlength="2" pattern="[0-9]{1,2}" name="prod-desc-price" value="0" placeholder="Descuento% Requerido">
                                                   </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-6 col-md-4">
-                                                  <div class="form-group label-floating">
-                                                    <label class="control-label">Unidades disponibles</label>
+                                                  <div class="form-group label-floating mb-2">
+                                                    <!--<label class="control-label">Unidades disponibles</label>-->
                                                     <input type="text" class="form-control" required maxlength="20" pattern="[0-9]{1,20}" name="prod-stock" placeholder="Unidades Requerido">
                                                   </div>
                                                 </div>
