@@ -69,7 +69,7 @@ error_reporting(E_PARSE);
                     ?>
 
 
-                    <a id="letras" href="./Paginas/Carrito.php" class="table-cell-td " style="
+                    <a id="letras" href="../Paginas/Carrito.php" class="table-cell-td " style="
                         text-decoration: none;">
                         <i id="letras" class="fa fa-shopping-cart "></i>&nbsp;&nbsp;Carrito
                     </a>
