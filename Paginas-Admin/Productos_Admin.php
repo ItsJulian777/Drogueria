@@ -44,7 +44,7 @@
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto ">
                         <li class="nav-item">
-                            <a href="Usuarios_Admin.html" class="nav-link link-dark link_sidebar ">
+                            <a href="Usuario_Admin.php" class="nav-link link-dark link_sidebar ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" fill="currentColor" class="bi bi-people-fill"
                                      viewBox="0 0 16 16">
                                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
@@ -83,7 +83,7 @@
 
                       
                         <li>
-                            <a href="Ventas_Admin.html" class="nav-link link-dark link_sidebar">
+                            <a href="Ventas_Admin.php" class="nav-link link-dark link_sidebar">
                                 
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">

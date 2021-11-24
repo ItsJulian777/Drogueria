@@ -46,7 +46,6 @@ color: black;
 }
 
 .main-header-title {
-    /*
     text-align: center;
     font-size: 2.5em;
     position: relative;
@@ -54,7 +53,6 @@ color: black;
     text-decoration: line-through;
     font-family: 'Langosta', cursiva;
     color: rgb(0, 0, 0);
-    */
 }
 
 .main-nav {
