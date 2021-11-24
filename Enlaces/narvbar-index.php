@@ -67,7 +67,7 @@
                              text-decoration: none;">Registro</a>
                                  <a id="letras"  style="
                                  text-decoration: none;" href="Paginas/LoginInicio.php" class="table-cell-td" data-toggle="modal" data-target=".modal-login">
-                                     <i id="letras" class="fa fa-shopping-cart"></i>&nbsp;&nbsp;Login
+                                     <i id="letras" class="fa fa-user"></i>&nbsp;&nbsp;Login
                                  </a>
                               ';
                          }
