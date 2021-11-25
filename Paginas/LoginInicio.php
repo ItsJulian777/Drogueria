@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
   <link rel="stylesheet" href="../Css/StyleLogin.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <h2>Login</h2>
     <form action="../InicioSesión/Loguearse.php" method="post">
       <div class="elemento">
-        <label for="usuario">usuario</label>
+        <label for="usuario">Usuario</label>
         <input type="text "  name="nombre-login" class="input" required/>
       </div>
       <div class="elemento">
@@ -41,9 +42,9 @@
                </div>
       <div class="elemento">
         <div class="alert"><?php echo isset($alert) ? $alert :'';?></div>
-        <input type="submit" value="Enviar" class="btn" />
-        <p>¿No tienes una cuenta?<a  href="../Paginas/registrarvista.php">Registrate Sesion</a></p>
-          <p><a class="link" href="../Index.php">HOME</a></p>
+        <input type="submit" value="Enviar" class="btn" class="btn btn-primary "/>
+        <p>¿No tienes un Usuario?<a  href="../Paginas/registrarvista.php">Registrar Usuario</a></p>
+          <p><a  class="btn btn-primary" class="link" href="../Index.php">HOME</a></p>
       </div>
     </form>
   </div>

@@ -54,7 +54,7 @@
                                 <div class="card card-success card-outline">
                                     <div class="card-body box-profile">
                                         <div class=" text-center">
-                                            <img src="../Img/avatar.png" class="profile-user-img img-fluid img-circle">
+                                            <img src="../Img/user.png" class="profile-user-img img-fluid img-circle">
 
 
 
@@ -213,17 +213,20 @@
 
         </div>
     </main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> 
+    
+    <footer class="mt-10    ">
+
     
     <?php
 }else{
@@ -234,6 +237,7 @@
     <!--Empieza el cuerpo-->
 
     <?php include '../Enlaces/footer.php'; ?>
+    </footer>
     <script src="../Javascript/Usuario.js"></script>
     <!--Termina el pie de pagina-->
 </body>

@@ -5,7 +5,7 @@ html {
 body {
     margin: 0%;
     padding: 0%;
-    background:#0d6efd ;
+    background:#0d6efd !important;
 
 }   
 
@@ -17,9 +17,10 @@ body {
     margin: 200px auto;
     width: 400px;
     padding: 30px;
-    background: rgba(255, 255, 255);
+    background: #ffffff;
     border-radius: 10px;
-    box-shadow: 20px 20px 50px 2px #5b2b9e;
+    
+    
     
 
 }
@@ -28,6 +29,7 @@ body {
     text-align: center;
     margin-top: 50px;
     color: #ffffff;
+    
 }
 nav{
     text-align: center;
@@ -71,7 +73,7 @@ nav{
 
 .contenedor .elemento input[type="submit"] {
     
-    background: rgb(167, 115, 220);
+   background-color: #0d6efd;
     border: 4px solid ;
     border-image: round;
     color: rgb(255, 255, 255);
@@ -90,7 +92,7 @@ nav{
 }
 .contenedor .elemento input[type="submit"]:hover {
 
-    background: #a41eb6;
+    background-color: #0d6efd;
     
 
 
