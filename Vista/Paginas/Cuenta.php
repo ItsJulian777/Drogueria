@@ -41,12 +41,13 @@
     <main class="main-main">
         <div class="container-main">
 
+            <br>
 
-            <div class="mt-5">
-                <p class=" text-center mb-5" class="h3" id="pro">Datos Personales</p>
+            <div>
+                <p class=" text-center" class="h3" id="pro">Datos Personales</p>
             </div>
             <section>
-                <div class="content mb-3">
+                <div class="content">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-3">
@@ -74,7 +75,7 @@
                                         <ul class="list-group list-group-unbordered mb-3">
 
                                             <li class="list-group-item">
-                                                <b id="id_usuario" style="color:black">
+                                                <b id="id_usuario" style="color:#0B7300">
                                                 <?php
                                       echo $DataUser['NIT'];
                                         ?>
@@ -97,7 +98,7 @@
                                         <h3 class="card-title">Sobre mi</h3>
                                     </div>
                                     <div class="card-body">
-                                        <strong style="color:#0d6efd">
+                                        <strong style="color:#0B7300">
                                             <i class="fas fa-phone mr-1"></i>Telefono
                                         </strong>
                                         <p class="text-muted">
@@ -106,7 +107,7 @@
                                         ?>
                                        
                                         </p>
-                                        <strong style="color:#0d6efd">
+                                        <strong style="color:#0B7300">
                                             <i class="fas fa-map-marjer-alt mr-1"></i>Residencia
                                         </strong>
                                         <p class="text-muted">
@@ -114,7 +115,7 @@
                                       echo $DataUser['Direccion'];
                                         ?>
                                         </p>
-                                        <strong style="color:#0d6efd">
+                                        <strong style="color:#0B7300">
                                             <i class="fas fa-at mr-1"></i>Correo
                                         </strong>
                                         <p class="text-muted">
@@ -133,7 +134,7 @@
                             </div>
                             <br>
                             
-                            <div class="col-md-9 mb-5">
+                            <div class="col-md-9">
                                 <div class="card card-success">
                                     <div class="card-header">
                                         <h3 class="card-title">Editar Datos personales</h3>
@@ -141,7 +142,7 @@
                                     <div class="card-body">
                                         <form class="form-horizontal" action="../../Controlador/InicioSesión/Actualiza.php" method="POST" class="formularior"
                                             id="formar" name="formar">
-                                            <div class="form-group row  mt-4 ">
+                                            <div class="form-group row">
                                                 <label for="telefono" class="col-sm-2 col-form-label">Telefono</label>
                                                 <div class="col-sm-10">
                                                     <input type="number" name="telefono" id="telefono"
@@ -149,7 +150,7 @@
                                                 </div>
 
                                             </div>
-                                            <div class="form-group row  mt-4 ">
+                                            <div class="form-group row">
                                                 <label for="residencia"
                                                     class="col-sm-2 col-form-label">Nombre</label>
                                                 <div class="col-sm-10">
@@ -158,14 +159,14 @@
                                                 </div>
 
                                             </div>
-                                            <div class="form-group row  mt-4 ">
+                                            <div class="form-group row">
                                                 <label for="sexo" class="col-sm-2 col-form-label">Apellido</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="apellido" id="apellido" class="form-control">
                                                 </div>
 
                                             </div>
-                                            <div class="form-group row  mt-4 ">
+                                            <div class="form-group row">
                                                 <label for="email" class="col-sm-2 col-form-label">Correo</label>
                                                 <div class="col-sm-10">
                                                     <input type="email" name="email" id="email" class="form-control">
@@ -173,7 +174,7 @@
 
                                             </div>
                                             
-                                            <div class="form-group row  mt-4 ">
+                                            <div class="form-group row">
                                                 <label for="info" class="col-sm-2 col-form-label">Dirección</label>
                                                 <div class="col-sm-10">
                                                     <textarea class="form-control" name="direccion" id="direccion" cols="30"
@@ -181,11 +182,11 @@
                                                 </div>
 
                                             </div>
-                                            <div class="form-group row mt-4 ">
+                                            <div class="form-group row">
 
                                                 <div class="offset-sm-2 col-sm-10 float-right">
                                                     <button name="actualizar" id="actualizar"
-                                                        class="btn btn-primary">Guardar</button>
+                                                        class="btn btn-block btn-outline-success">Guardar</button>
                                                 </div>
 
                                             </div>
@@ -218,8 +219,12 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> 
     
-        
     <footer class="mt-10    ">
 
     

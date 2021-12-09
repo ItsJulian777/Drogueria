@@ -1,7 +1,12 @@
 
-    
-  <?php  include '../../Modelo/Conexion/configServer.php';?>
-   <?php include '../../Modelo/Conexion/consulSQL.php';?>
+    <?php
+ 
+ session_start();
+ error_reporting(E_PARSE);
+ 
+	include '../../Modelo/Conexion/configServer.php';
+	include '../../Modelo/Conexion/consulSQL.php';
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +15,7 @@
 <?php include '../Enlaces/link-Productos.php'; ?>
 </head>
 
-<body>
+<body id="container-page-product">
     <header class="main-header">
         <div class="container">
 
@@ -32,133 +37,120 @@
     -->
   <!--Empieza la parte superior-->
   <!-- Pills navs -->
-  <ul id="superior" class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
-    <li id="navega" class="nav-item" role="presentation">
-      <a class="nav-link active" id="ex3-tab-1" data-mdb-toggle="pill" href="#ex3-pills-1" role="tab"
-        aria-controls="ex3-pills-1" aria-selected="true">Medicamentos</a>
-    </li>
-    <li id="navega" class="nav-item" role="presentation">
-      <a class="nav-link active" id="ex3-tab-2" data-mdb-toggle="pill" href="#ex3-pills-2" role="tab"
-        aria-controls="ex3-pills-2" aria-selected="false">Cuidado respiratotio</a>
-    </li>
-    <li id="navega" class="nav-item" role="presentation">
-      <a class="nav-link active" id="ex3-tab-3" data-mdb-toggle="pill" href="#ex3-pills-3" role="tab"
-        aria-controls="ex3-pills-3" aria-selected="false">Cuidado Personal</a>
-    </li>
-    <li id="navega" class="nav-item" role="presentation">
-      <a class="nav-link active" id="ex3-tab-3" data-mdb-toggle="pill" href="#ex3-pills-3" role="tab"
-        aria-controls="ex3-pills-3" aria-selected="false">Cuidado en casa</a>
-    </li>
-  </ul>
-  <!-- Pills navs -->
+  <br>
+  <br>
+  
+
+
+
 
 
   <!-- Pills content -->
   <!--Termina la parte superior de la pagina-->
   <!--Empieza el cuerpo-->
+ 
+<div >
+	<div class="row">
+		<div class="col-xs-20">
+            <br><br>
+            <div class="panel panel-info">
+              <div class="panel-heading text-center"><h4>Productos en tienda</h4></div>
+                <div>
+                  <table class="table table-striped table-hover">
+                      <thead >
+                          <tr>
+                          	  <th class="text-center">#</th>
+                              <th class="text-center">Código</th>
+                              <th class="text-center">Nombre</th>
+                              <th class="text-center">Categoría</th>
+                              <th class="text-center">Precio</th>
+                              <th class="text-center">Modelo</th>
+                              <th class="text-center">Marca</th>
+                              <th class="text-center">Stock</th>
+                              <th class="text-center">Proveedor</th>
+                              <th class="text-center">Estado</th>
+                              <th class="text-center">fotografia</th>
+                              <th class="text-center"></th>
+                              
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <?php
+                        	$mysqli = mysqli_connect(SERVER, USER, PASS, BD);
+							mysqli_set_charset($mysqli, "utf8");
 
-  <main class="main-main">
-     <section id="infoproduct">
-  <div class="container">
-            <div class="page-header">
-              <h1>PRODUCTOS <small class="tittles-pages-logo"></small></h1>
-            </div>
-            <?php
-              $checkAllCat=ejecutarSQL::consultar("SELECT * FROM categoria");
-              if(mysqli_num_rows($checkAllCat)>=1):
-            ?>
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-xs-12 col-md-4">
-                    <div class="dropdown">
-                      <button class="btn btn-primary btn-raised dropdown-toggle" type="button" id="drpdowncategory" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Seleccione una categoría &nbsp;
-                        <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="drpdowncategory">
-                        <?php 
-                          while($cate=mysqli_fetch_array($checkAllCat, MYSQLI_ASSOC)){
-                              echo '
-                                <li><a href="product.php?categ='.$cate['CodigoCat'].'">'.$cate['Nombre'].'</a></li>
-                                <li role="separator" class="divider"></li>
-                              ';
-                          }
+							$pagina = isset($_GET['pag']) ? (int)$_GET['pag'] : 1;
+							$regpagina = 30;
+							$inicio = ($pagina > 1) ? (($pagina * $regpagina) - $regpagina) : 0;
+
+							$productos=mysqli_query($mysqli,"SELECT SQL_CALC_FOUND_ROWS * FROM producto LIMIT $inicio, $regpagina");
+
+							$totalregistros = mysqli_query($mysqli,"SELECT FOUND_ROWS()");
+							$totalregistros = mysqli_fetch_array($totalregistros, MYSQLI_ASSOC);
+
+							$numeropaginas = ceil($totalregistros["FOUND_ROWS()"]/$regpagina);
+
+							$cr=$inicio+1;
+                            while($prod=mysqli_fetch_array($productos, MYSQLI_ASSOC)){
                         ?>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-xs-12 col-md-4 col-md-offset-4">
-                    <form action="./search.php" method="GET">
-                      <div class="form-group">
-                        <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                          <input type="text" id="addon1" class="form-control" name="term" required="" title="Escriba nombre o marca del producto">
-                          <span class="input-group-btn">
-                              <button class="btn btn-info btn-raised" type="submit">Buscar</button>
-                          </span>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                        <tr>
+                        	<td class="text-center"><?php echo $cr; ?></td>
+                        	<td class="text-center"><?php echo $prod['CodigoProd']; ?></td>
+                        	<td class="text-center"><?php echo $prod['NombreProd']; ?></td>
+                        	<td class="text-center">
+                        		<?php 
+                        			$categ=ejecutarSQL::consultar("SELECT Nombre FROM categoria WHERE CodigoCat='".$prod['CodigoCat']."'");
+                        			$datc=mysqli_fetch_array($categ, MYSQLI_ASSOC);
+                        			echo $datc['Nombre'];
+                        		?>
+                        	</td>
+                          
+                          <td class="text-center"><?php echo (($prod['Precio']-($prod['Precio']*($prod['Descuento']/100)))) ?></td>
+                        	<td class="text-center"><?php echo $prod['Modelo']; ?></td>
+                        	<td class="text-center"><?php echo $prod['Marca']; ?></td>
+                        	<td class="text-center"><?php echo $prod['Stock']; ?></td>
+                        	<td class="text-center">
+                        		<?php
+                        			$prov=ejecutarSQL::consultar("SELECT NombreProveedor FROM proveedor WHERE NITProveedor='".$prod['NITProveedor']."'");
+                        			$datp=mysqli_fetch_array($prov, MYSQLI_ASSOC);
+                        			echo $datp['NombreProveedor'];
+                        		?>
+                        	</td>
+                        	<td class="text-center">
+                        		<?php echo $prod['Estado']; ?>
+                        	</td>
+                        
+                          <td class="text-center" class="img-product"><img height="100px" src="data:image/png;base64,<?php echo base64_encode($prod['Imagen']); ?>"/></td>
+                          <td class="text-center">
+                        	
+                          
+                          <?php
+                          if($_SESSION['nombreAdmin']!="" || $_SESSION['nombreUser']!=""){
+                                        echo '
+                                        <form action="../../Controlador/InicioSesión/Carrito.php" method="POST" class="FormCatElec" data-form="">
+                                           <input type="hidden" value="'.$prod['CodigoProd'].'" name="codigo">
+                                           <button class="btn btn-lg btn-raised btn-success btn-block"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp; Añadir al carrito</button>
+                                        </form>
+                                        <div class="ResForm"></div>';
+                                    }else{
+                                        echo '<p class="text-center"><small>Para agregar productos al carrito de compras debes iniciar sesion</small></p><br>';
+                                        echo '<button class="btn btn-lg btn-raised btn-info btn-block" data-toggle="modal" data-target=".modal-login"><i class="fa fa-user"></i>&nbsp;&nbsp; Iniciar sesion</button>';
+                                    }
+                                    if($prod['Imagen']!="" && is_file("./assets/img-products/".$prod['Imagen'])){ 
+                                     
+                                  }
+                                
+                      }
+                                
+                                ?>
+                        	</td>
+                        </tr>
+                        
+                      </tbody>
+                  </table>
                 </div>
-              </div>
-            <?php
-                $categoria=consultasSQL::clean_string($_GET['categ']);
-                if(isset($categoria) && $categoria!=""){
-            ?>
-              <div class="row">
-                <?php
-                  $mysqli = mysqli_connect(SERVER, USER, PASS, BD);
-                  mysqli_set_charset($mysqli, "utf8");
-
-                  $pagina = isset($_GET['pag']) ? (int)$_GET['pag'] : 1;
-                  $regpagina = 20;
-                  $inicio = ($pagina > 1) ? (($pagina * $regpagina) - $regpagina) : 0;
-
-                  $consultar_productos=mysqli_query($mysqli,"SELECT SQL_CALC_FOUND_ROWS * FROM producto WHERE CodigoCat='$categoria' AND Stock > 0 AND Estado='Activo' LIMIT $inicio, $regpagina");
-
-                  $selCat=ejecutarSQL::consultar("SELECT * FROM categoria WHERE CodigoCat='$categoria'");
-                  $datCat=mysqli_fetch_array($selCat, MYSQLI_ASSOC);
-
-                  $totalregistros = mysqli_query($mysqli,"SELECT FOUND_ROWS()");
-                  $totalregistros = mysqli_fetch_array($totalregistros, MYSQLI_ASSOC);
-        
-                  $numeropaginas = ceil($totalregistros["FOUND_ROWS()"]/$regpagina);
-
-                  if(mysqli_num_rows($consultar_productos)>=1){
-                    echo '<h3 class="text-center">Se muestran los productos de la categoría <strong>"'.$datCat['Nombre'].'"</strong></h3><br>';
-                    while($prod=mysqli_fetch_array($consultar_productos, MYSQLI_ASSOC)){
-                ?>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                         <div class="thumbnail">
-                           <img class="img-product" src="./assets/img-products/<?php if($prod['Imagen']!="" && is_file("./assets/img-products/".$prod['Imagen'])){ echo $prod['Imagen']; }else{ echo "default.png"; } ?>
-                           ">
-                           <div class="caption">
-                             <h3><?php echo $prod['Marca']; ?></h3>
-                             <p><?php echo $prod['NombreProd']; ?></p>
-                             <?php if($prod['Descuento']>0): ?>
-                             <p>
-                             <?php
-                             $pref=number_format($prod['Precio']-($prod['Precio']*($prod['Descuento']/100)), 2, '.', '');
-                             echo $prod['Descuento']."% descuento: $".$pref; 
-                             ?>
-                             </p>
-                             <?php else: ?>
-                              <p>$<?php echo $prod['Precio']; ?></p>
-                             <?php endif; ?>
-                             <p class="text-center">
-                                 <a href="infoProd.php?CodigoProd=<?php echo $prod['CodigoProd']; ?>" class="btn btn-primary btn-raised btn-sm btn-block"><i class="fa fa-plus"></i>&nbsp; Detalles</a>
-                             </p>
-
-                           </div>
-                         </div>
-                     </div>     
-                <?php    
-                  }
-                  if($numeropaginas>0):
-                ?>
-                <div class="clearfix"></div>
-                <div class="text-center">
+                <?php if($numeropaginas>=1): ?>
+              	<div class="text-center">
                   <ul class="pagination">
                     <?php if($pagina == 1): ?>
                         <li class="disabled">
@@ -168,7 +160,7 @@
                         </li>
                     <?php else: ?>
                         <li>
-                            <a href="product.php?categ=<?php echo $categoria; ?>&pag=<?php echo $pagina-1; ?>">
+                            <a href="configAdmin.php?view=productlist&pag=<?php echo $pagina-1; ?>">
                                 <span aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
@@ -178,9 +170,9 @@
                     <?php
                         for($i=1; $i <= $numeropaginas; $i++ ){
                             if($pagina == $i){
-                                echo '<li class="active"><a href="product.php?categ='.$categoria.'&pag='.$i.'">'.$i.'</a></li>';
+                                echo '<li class="active"><a href="configAdmin.php?view=productlist&pag='.$i.'">'.$i.'</a></li>';
                             }else{
-                                echo '<li><a href="product.php?categ='.$categoria.'&pag='.$i.'">'.$i.'</a></li>';
+                                echo '<li><a href="configAdmin.php?view=productlist&pag='.$i.'">'.$i.'</a></li>';
                             }
                         }
                     ?>
@@ -194,31 +186,18 @@
                         </li>
                     <?php else: ?>
                         <li>
-                            <a href="product.php?categ=<?php echo $categoria; ?>&pag=<?php echo $pagina+1; ?>">
+                            <a href="configAdmin.php?view=productlist&pag=<?php echo $pagina+1; ?>">
                                 <span aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
                     <?php endif; ?>
                   </ul>
                 </div>
-                <?php
-                  endif;
-                  }else{
-                    echo '<h2 class="text-center">Lo sentimos, no hay productos registrados en la categoría <strong>"'.$datCat['Nombre'].'"</strong></h2>';
-                  }
-                ?>
-              </div>
-            <?php
-                }else{
-                  echo '<h2 class="text-center">Por favor seleccione una categoría para empezar</h2>';
-                }
-              else:
-                echo '<h2 class="text-center">Lo sentimos, no hay productos ni categorías registradas en la tienda</h2>';
-              endif;
-            ?>
+                <?php endif; ?>
+            </div>
         </div>
-    </section>
-  </main>
+	</div>
+</div>
   <?php include '../Vista/Enlaces/footer.php'; ?>
 
   <!--Termina el pie de pagina-->
