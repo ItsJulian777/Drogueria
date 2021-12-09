@@ -8,7 +8,7 @@ body {
     margin: 30px 20px 0px 20px;
  
     padding: 0%;
-    background: linear-gradient(#021582, #a032ee, #613c80);
+    
 
 }
 header{
@@ -23,7 +23,15 @@ header{
     font-family:'Langosta', cursiva;
 
 }
-
+#store, #infoproduct, #container-pedido{
+    background-color: rgba(255,255,255,.97);
+    min-height: 900px;
+}
+.img-product{
+    max-height: 250px;
+    display: block;
+    margin: 0 auto;
+}
 
 
 #icono{
