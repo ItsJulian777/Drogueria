@@ -1,0 +1,60 @@
+* {
+  max-height: 100vh !important;
+}
+
+body {
+  max-height: 89vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+/*
+Seccion sidebar
+
+*/
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+  }
+}
+
+
+.container-admin {
+  max-height: 100vh !important;
+}
+
+.container-info-admin {
+  max-height: 100vh;
+  background-color: #ffffff;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.link_sidebar:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+/* Seccion Usuarios Admin */
+
+.container-Users-admin {
+  background-color: #ffffff;
+  width: 79%;
+  text-align: center;
+  margin: 10px !important;
+}

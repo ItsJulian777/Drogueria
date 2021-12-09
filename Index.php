@@ -2,7 +2,7 @@
     <html lang="en">
 
     <head>
-    <?php  echo'<link rel="stylesheet" href="Css\style.css">' ?>
+    <?php  echo'<link rel="stylesheet" href="Vista\Css\style.css">' ?>
     </head>
 
     <body>
@@ -19,7 +19,7 @@
                 </div>
 
             </div>
-            <?php include 'Enlaces/narvbar-index.php'; ?>
+            <?php include 'Vista/Enlaces/narvbar-index.php'; ?>
         </header>
         
         
@@ -114,7 +114,7 @@
 
                     <div class="producto">
                         <div class="card_product">
-                            <img src="./Img/acetamino.png" alt="">
+                            <img src="Vista/Img/acetamino.png" alt="">
                         </div>
 
                         <div class="pro_description">
@@ -134,7 +134,7 @@
 
                     <div class="producto">
                         <div class="card_product">
-                            <img src="Img/advil.png" alt="">
+                            <img src="Vista/Img/advil.png" alt="">
                         </div>
                         <div class="pro_description">
                             <h4 class="title_product">Advil Max
@@ -155,7 +155,7 @@
 
                     <div class="producto">
                         <div class="card_product">
-                            <img src="Img/dolexF.png" alt="">
+                            <img src="Vista/Img/dolexF.png" alt="">
                         </div>
                         <div class="pro_description">
                             <h4 class="title_product">Dolex Forte
@@ -171,7 +171,7 @@
                     </div>
                     <div class="producto">
                         <div class="card_product">
-                            <img src="Img/nan.png" alt="">
+                            <img src="Vista/Img/nan.png" alt="">
                         </div>
                         <div class="pro_description">
                             <h4 class="title_product">Leche Nan Pro </h4>
@@ -185,7 +185,7 @@
                     </div>
                     <div class="producto">
                         <div class="card_product">
-                            <img src="Img/pañales.png" alt="">
+                            <img src="Vista/Img/pañales.png" alt="">
                         </div>
                         <div class="pro_description">
                             <h4 class="title_product">Pañales</h4>
@@ -203,7 +203,7 @@
                     </div>
                     <div class="producto">
                         <div class="card_product">
-                            <img src="Img/vitaminaC.png" alt="">
+                            <img src="Vista/Img/vitaminaC.png" alt="">
                         </div>
                         <div class="pro_description">
                             <h4 class="title_product">Vitamina C</h4>
@@ -235,7 +235,7 @@
             </div>
             </div>
 
-            <?php include 'Enlaces/footer.php'; ?>
+            <?php include 'Vista/Enlaces/footer.php'; ?>
 
         <!--Termina el pie de pagina-->
     </body>
