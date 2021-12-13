@@ -1,12 +1,7 @@
 
-    <?php
- 
- session_start();
- error_reporting(E_PARSE);
- 
-	include '../../Modelo/Conexion/configServer.php';
-	include '../../Modelo/Conexion/consulSQL.php';
-  ?>
+    
+  <?php  include '../../Modelo/Conexion/configServer.php';?>
+   <?php include '../../Modelo/Conexion/consulSQL.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +10,7 @@
 <?php include '../Enlaces/link-Productos.php'; ?>
 </head>
 
-<body id="container-page-product">
+<body>
     <header class="main-header">
         <div class="container">
 
@@ -120,23 +115,26 @@
                         		<?php echo $prod['Estado']; ?>
                         	</td>
                         
-                          <td class="text-center" class="img-product"><img height="100px" src="data:image/png;base64,<?php echo base64_encode($prod['Imagen']); ?>"/></td>
+                          <td class="text-center" class="img-product"> <img class="img-product" src="../Controlador/InicioSesión/"<?php if($prod['Imagen']!="" && is_file("../Controlador/InicioSesión/".$prod['Imagen'])){ echo $prod['Imagen']; }else{ echo "../Controlador/InicioSesión/default.png"; } ?></td>
                           <td class="text-center">
                         	
                           
                           <?php
                           if($_SESSION['nombreAdmin']!="" || $_SESSION['nombreUser']!=""){
                                         echo '
-                                        <form action="../../Controlador/InicioSesión/Carrito.php" method="POST" class="FormCatElec" data-form="">
+                                        <form action="../../Controlador/InicioSesión/Carrito.php" method="POST" >
                                            <input type="hidden" value="'.$prod['CodigoProd'].'" name="codigo">
+                                           <div class="form-group">
+                                          <input type="number" class="form-control" value="1" min="1" max="'.$prod['Stock'].'" name="cantidad">
+                                            </div>
                                            <button class="btn btn-lg btn-raised btn-success btn-block"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp; Añadir al carrito</button>
                                         </form>
                                         <div class="ResForm"></div>';
                                     }else{
                                         echo '<p class="text-center"><small>Para agregar productos al carrito de compras debes iniciar sesion</small></p><br>';
-                                        echo '<button class="btn btn-lg btn-raised btn-info btn-block" data-toggle="modal" data-target=".modal-login"><i class="fa fa-user"></i>&nbsp;&nbsp; Iniciar sesion</button>';
+                                        echo '<a href="LoginInicio.php" class="btn btn-success">Iniciar Sesión</a>';
                                     }
-                                    if($prod['Imagen']!="" && is_file("./assets/img-products/".$prod['Imagen'])){ 
+                                    if($prod['Imagen']!="" && is_file("../../Controlador/InicioSesión/1114.png".$prod['Imagen'])){ 
                                      
                                   }
                                 
@@ -203,4 +201,4 @@
   <!--Termina el pie de pagina-->
 </body>
 
-</html>
+</html></html>
