@@ -39,7 +39,7 @@
                                  text-decoration: none;">
                                      <i id="letras"  href="Vista/Paginas-Admin/Index_Admin.php" class="fa fa-user"></i>&nbsp;&nbsp;'.$_SESSION['nombreAdmin'].'
                                  </a>
-                                 <a id="letras" href="../Paginas/Carrito.php" class="table-cell-td " style="
+                                 <a id="letras" href="Vista/Paginas/Pedidos.php" class="table-cell-td " style="
                                  text-decoration: none;">
                                 <i id="letras" class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;&nbsp;Pedidos
                     </a>
@@ -54,7 +54,7 @@
                                  <a href="#!" class="table-cell-td userConBtn" data-code="'.$_SESSION['UserNIT'].'">
                                  <i class="glyphicon glyphicon-cog"></i>
                              </a>
-                             <a id="letras" href="../Paginas/Carrito.php" class="table-cell-td " style="
+                             <a id="letras" href="Vista/Paginas/Pedidos.php" class="table-cell-td " style="
                              text-decoration: none;">
                              <i id="letras" class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;&nbsp;Pedidos
                     </a>
