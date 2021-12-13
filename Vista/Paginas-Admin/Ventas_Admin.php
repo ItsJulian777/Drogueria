@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-    <?php include '../Vista/Enlaces/link-Admin.php'; ?>
-    </head>
+<head>
+    <?php include '../Enlaces/link-AdmiProductos.php'; ?>
+</head>
 
-    <body>
+
+<body>
     <header class="main-header">
         <div class="container">
 
@@ -14,17 +15,16 @@
                     Tu Drogueria
                 </h1>
                 <img id="icono" src="https://image.flaticon.com/icons/png/512/185/185932.png" alt="Drogueria el reloj">
-              
-                        
+
+
             </div>
 
         </div>
-        <?php include '../Vista/Enlaces/navbar.php'; ?>
+        <?php include '../Enlaces/navbar.php'; ?>
     </header>
-<br>
-<br>
 
-
+    <br>
+    <br>
 
 
 
@@ -89,7 +89,7 @@
 
 
                     <li>
-                        <a href="Ventas_Admin.php" class="nav-link link-dark link_sidebar">
+                        <a href="" class="nav-link link-dark link_sidebar">
 
 
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
