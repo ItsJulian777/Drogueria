@@ -10,21 +10,12 @@ error_reporting(E_PARSE);
                 <li class="nav-item">
                     <a id="letras" class="nav-link active" aria-current="page" href="../../Index.php">INICIO</a>
                 </li>
-                <li class="nav-item">
-                    <a id="letras" class="nav-link" href="#">OFERTAS</a>
-                </li>
+               
                 <li class="nav-item dropdown">
-                    <a id="letras" class="nav-link dropdown-toggle" href="../Paginas/Productos.php" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a id="letras" class="nav-link active" href="../Paginas/Productos.php" aria-current="page">
                         PRODUCTOS
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="../Paginas/Productos.php">Action</a></li>
-                        <li><a class="dropdown-item" href="../Paginas/Productos.php">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="../Paginas/Productos.php">Something else here</a></li>
-                    </ul>
+                   
                 </li>
 
             </ul>
@@ -43,6 +34,10 @@ error_reporting(E_PARSE);
                                 text-decoration: none;">
                                     <i id="letras"  href="../Paginas-Admin/Index_Admin.html" class="fa fa-user"></i>&nbsp;&nbsp;' . $_SESSION['nombreAdmin'] . '
                                 </a>
+                                <a id="letras" href="../Paginas/Carrito.php" class="table-cell-td " style="
+                                 text-decoration: none;">
+                                 <i id="letras" class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;&nbsp;Pedidos
+                    </a>
                              ';
                     } else if (!$_SESSION['nombreUser'] == "") {
                         echo ' 
@@ -54,6 +49,10 @@ error_reporting(E_PARSE);
                                 <a href="#!" class="table-cell-td userConBtn" data-code="' . $_SESSION['UserNIT'] . '">
                                 <i class="glyphicon glyphicon-cog"></i>
                             </a>
+                            <a id="letras" href="../Paginas/Carrito.php" class="table-cell-td " style="
+                              text-decoration: none;">
+                             <i id="letras" class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;&nbsp;Pedidos
+                    </a>
                          ';
                     } else {
                         echo ' 
@@ -73,6 +72,7 @@ error_reporting(E_PARSE);
                         text-decoration: none;">
                         <i id="letras" class="fa fa-shopping-cart "></i>&nbsp;&nbsp;Carrito
                     </a>
+                    
 
                 </div>
 
