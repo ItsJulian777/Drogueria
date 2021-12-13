@@ -4,10 +4,10 @@ error_reporting(E_PARSE);
 include '../../Modelo/Conexion/consulSQL.php';
 session_start();
 $codigo=consultasSQL::clean_string($_POST['codigo']);
-
+$cantidad=consultasSQL::clean_string($_POST['cantidad']);
 if(empty($_SESSION['carro'][$codigo]))
 {
-	$_SESSION['carro'][$codigo] = array('producto' => $codigo
+	$_SESSION['carro'][$codigo] = array('producto' => $codigo, 'cantidad' => $cantidad
                                         
      );
      echo '<script> location.href="../../Vista/Paginas/Carrito.php"; </script>';
