@@ -3,6 +3,10 @@
    error_reporting(E_PARSE);
 	include '../../Modelo/Conexion/configServer.php';
 	include '../../Modelo/Conexion/consulSQL.php';
+    
+    $SelectUser=ejecutarSQL::consultar("SELECT * FROM Producto ");
+	if(mysqli_num_rows($SelectUser)){
+		
 ?>
 <!doctype html>
 <html lang="en">
@@ -252,9 +256,64 @@
                             </div>     
                         </div>
                     </div>
+                  <br>
+                  <br>
+                 
+
+            <h3 class="text-primary text-center">Lista de Productos</h3>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center">Nit</th>
+                        <th class="text-center">CodigoProducto</th>
+                        <th class="text-center">NombreProducto</th>
+                        <th class="text-center">Categoria</th>
+                        <th class="text-center">Precio</th>
+                      <th class="text-center">Descuento</th>
+                        <th class="text-center">Modelo</th>
+                        <th class="text-center">Marca</th>
+                        <th class="text-center">Stock</th>
+                        <th class="text-center">Proveedor</th>
+                        
+                       
+    </tr>
+
+
+                </thead>
+                <tbody>
+                    <?php
+while($DataUser=mysqli_fetch_array($SelectUser, MYSQLI_ASSOC)){
+                    ?>
+<tr>
+             
+                        <td class="text-center"><?php echo $DataUser['id']; ?></td>
+                        <td class="text-center"><?php echo $DataUser["CodigoProd"]; ?></td>
+                    <td class="text-center"><?php echo $DataUser["NombreProd"]; ?></td>
+                     <td class="text-center"><?php echo $DataUser["CodigoCat"]; ?></td>
+                      <td class="text-center"><?php echo $DataUser["Precio"]; ?></td>
+                      <td class="text-center"><?php echo $DataUser["Descuento"]; ?></td>
+                      <td class="text-center"><?php echo $DataUser["Modelo"]; ?></td>
+                      <td class="text-center"><?php echo $DataUser["Marca"]; ?></td>
+                      <td class="text-center"><?php echo $DataUser["Stock"]; ?></td>
+                      <td class="text-center"><?php echo $DataUser["NITProveedor"]; ?></td>
+                      <td class="text-center">
+                        		<form action="../../Controlador/InicioSesión/delprod.php" method="POST" class="FormCatElec" data-form="delete">
+                        			<input type="hidden" name="prod-code" value="<?php echo $prod['CodigoProd']; ?>">
+                        			<button type="submit" class="btn btn-raised btn-xs btn-danger">Eliminar</button>	
+                        		</form>
+                        	</td>
+                    <?php
+} 
+}
+?>
+</tr>
+                </tbody>
+            </table>
+         
           </div>
 
             </div>
+
         </main>
 
 
