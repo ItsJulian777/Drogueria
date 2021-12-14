@@ -114,10 +114,12 @@
 
                 </ul>
                 <div class="main-container">
+                    
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="container-form-admin">
-                                <h3 class="text-primary text-center">Agregar una categoria</h3>
+                                <h3 class=" text-center">Agregar una categoria</h3>
+                                <hr>
                                 <form action="../../Controlador/InicioSesión/Categoria.php" method="POST" enctype="multipart/form-data" class="FormCatElec" data-form="save">
                                     <div class="container-fluid">
                                         <div class="row">
@@ -125,14 +127,14 @@
                                             <div class="col-xs-12 col-sm-6 col-md-4">
                                                 <div class="form-group label-floating">
                                                     <!--<label class="control-label">Código de la categoria</label>-->
-                                                    <input class="input" type="text" required maxlength="30" name="categ-code" placeholder="Codigo Requerido">
+                                                    <input class="form-control text-center" type="text" required maxlength="30" name="categ-code" placeholder="Codigo Requerido">
                                                 </div>
                                             </div>
 
                                             <div class="col-xs-12 col-sm-6 col-md-4">
                                                 <div class="form-group label-floating">
                                                     <!-- <label class="control-label">Nombre de la categoria</label>-->
-                                                    <input type="text" class="form-control" required maxlength="30" name="categ-name" placeholder="Nombre Requerido">
+                                                    <input type="text" class="form-control text-center" required maxlength="30" name="categ-name" placeholder="Nombre Requerido">
                                                 </div>
                                             </div>
 
@@ -140,7 +142,7 @@
                                             <div class="col-xs-12 col-sm-6 col-md-4">
                                                 <div class="form-group label-floating">
                                                     <!--<label class="control-label">Descripcion</label>-->
-                                                    <input type="text" class="form-control" required name="categ-descrip" placeholder="Descripcion">
+                                                    <input type="text" class="form-control text-center" required name="categ-descrip" placeholder="Descripcion">
                                                 </div>
                                             </div>
 

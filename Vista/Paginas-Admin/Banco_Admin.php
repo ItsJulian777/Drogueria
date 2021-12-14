@@ -31,7 +31,7 @@
     <main>
         <div class="d-flex container-admin">
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-light"
-                style="width:280px; min-height: 80vh; border-right: 0.2px solid rgb(63, 63, 63);">
+                style="width:280px; min-height: 120vh; border-right: 0.2px solid rgb(63, 63, 63);">
                 <span class="fs-4" style="text-align: center;">Administrador</span>
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto ">
@@ -130,35 +130,36 @@
                 <div class="main-container">
                     <div class="row">
                         <div class="col-xs-12">
-                            <div class="container-form-admin">
+                            
                           
                                 <div class="container-form-admin">
               <form action="../../Controlador/InicioSesión/Banco.php" method="POST" role="form" class="FormCatElec" data-form="save">
-                <h3 class="text-info text-center">Agregar Cuenta de banco</h3>
+                <h3 class="text-center">Agregar Cuenta de banco</h3>
+                <hr>
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="form-group label-floating">
-                                <label class="control-label">Numero de cuenta</label>
-                                <input class="form-control" type="text" name="bancoCuenta" maxlength="50" required="">
+                    <div class="row text-center">
+                        <div class="col-xs-12 col-sm-6 " >
+                            <div class="form-group label-floating mb-3">
+                                
+                                <input class="form-control text-center" type="text" name="bancoCuenta" maxlength="50" required="" placeholder="Numero de Cuenta">
                             </div> 
                         </div>
                         <div class="col-xs-12 col-sm-6">
-                            <div class="form-group label-floating">
-                                <label class="control-label">Nombre del banco</label>
-                                <input class="form-control" type="text" name="bancoNombre" maxlength="50" required="">
+                            <div class="form-group label-floating mb-3">
+                                
+                                <input class="form-control text-center" type="text" name="bancoNombre" maxlength="50" required="" placeholder="Nombre del Banco">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
-                            <div class="form-group label-floating">
-                                <label class="control-label">Nombre del beneficiario</label>
-                                <input class="form-control" type="text" name="bancoBeneficiario" maxlength="50" required="">
+                            <div class="form-group label-floating mb-3">
+                                
+                                <input class="form-control text-center" type="text" name="bancoBeneficiario" maxlength="50" required="" placeholder="Nombre del Beneficiario">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
-                            <div class="form-group label-floating">
-                                <label class="control-label">Tipo de cuenta</label>
-                                <input class="form-control" type="text" name="bancoTipo" maxlength="50" required="">
+                            <div class="form-group label-floating mb-3">
+                               
+                                <input class="form-control text-center" type="text" name="bancoTipo" maxlength="50" required="" placeholder="Tipo de Cuenta">
                             </div>
                         </div>
                     </div>

@@ -131,49 +131,50 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="container-form-admin">
-                                <h3 class="text-primary text-center">Agregar un Proveedor</h3>
+                                <h3 class="text-center">Agregar un Proveedor</h3>
+                                <hr>
                                 <form action="../../Controlador/InicioSesión/Proveedor.php" method="POST"
                                     enctype="multipart/form-data" class="FormCatElec" data-form="save">
                                     <div class="container-fluid">
                                         <div class="row">
 
                                             <div class="col-xs-12 col-sm-6 col-md-4">
-                                                <div class="form-group label-floating">
+                                                <div class="form-group label-floating mb-3">
                                                     <!--<label class="control-label">Código de la categoria</label>-->
-                                                    <input class="form-control" type="text" name="prove-nit"
+                                                    <input class="form-control text-center" type="text" name="prove-nit"
                                                         pattern="[0-9]{1,20}" maxlength="20" required=""placeholder="Nit Requerido">
                                                 </div>
-                                            </div>
+                                            </div>  
 
                                             <div class="col-xs-12 col-sm-6 col-md-4">
-                                                <div class="form-group label-floating">
+                                                <div class="form-group label-floating mb-3">
                                                     <!-- <label class="control-label">Nombre de la categoria</label>-->
-                                                    <input type="text" class="form-control" required maxlength="30"
+                                                    <input type="text" class="form-control text-center" required maxlength="30"
                                                         name="prove-name" placeholder="Nombre Requerido">
                                                 </div>
                                             </div>
 
 
                                             <div class="col-xs-12 col-sm-6 col-md-4">
-                                                <div class="form-group label-floating">
+                                                <div class="form-group label-floating mb-3">
                                                     <!--<label class="control-label">Descripcion</label>-->
-                                                    <input type="text" class="form-control" required name="prove-dir"
+                                                    <input type="text" class="form-control text-center" required name="prove-dir"
                                                         placeholder="Direccion">
                                                 </div>
                                             </div>
 
-                                            <div class="col-xs-12 col-sm-6 col-md-4">
-                                                <div class="form-group label-floating">
+                                            <div class="col-xs-12 col-sm-6 col-md-4 mb-2">
+                                                <div class="form-group label-floating mb-3">
                                                     <!--<label class="control-label">Descripcion</label>-->
-                                                    <input type="text" class="form-control" required name="prove-tel"
+                                                    <input type="text" class="form-control text-center" required name="prove-tel"
                                                         placeholder="Telefono">
                                                 </div>
                                             </div>
 
-                                            <div class="col-xs-12 col-md-6">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Página Web (http://ejemplo.com)</label>
-                                                    <input class="form-control" type="url" name="prove-web">
+                                            <div class="col-xs-12 col-sm-6 col-md-4 mb-3 ">
+                                                <div class="form-group label-floating mb-3">    
+                                                    
+                                                    <input class="form-control text-center" type="url" name="prove-web" placeholder="Página Web (http://ejemplo.com)">
                                                 </div>
                                             </div>
 
