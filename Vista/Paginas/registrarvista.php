@@ -118,7 +118,7 @@
       <p><button type="submit" class="btn btn-primary btn-block btn-raised">Registrarse</button></p>
       <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
       <p>¿Ya tienes una cuenta?<a href="LoginInicio.php">Iniciar Sesion</a></p>
-      <p><a class="btn btn-primary" class="link" href="../../Index.php">HOME</a></p>
+      <p class="text-center"><a class="btn btn-primary" class="link" href="../../Index.php">HOME</a></p>
     </form>
   </div>
 

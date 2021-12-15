@@ -136,7 +136,7 @@
                                         </form>
                                         <div class="ResForm"></div>';
                                         } else {
-                                            echo '<p class="text-center"><small>Para agregar productos al carrito de compras debes iniciar sesion</small></p><br>';
+                                            echo '<p class="text-center text-danger"><small>Para agregar productos al carrito de compras debes iniciar sesion</small></p><br>';
                                             echo '<a href="LoginInicio.php" class="btn btn-primary">Iniciar Sesión</a>';
                                         }
                                         if ($prod['Imagen'] != "" && is_file("../../Controlador/InicioSesión/1114.png" . $prod['Imagen'])) {
